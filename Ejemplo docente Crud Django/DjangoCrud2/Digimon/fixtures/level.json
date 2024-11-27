@@ -1,0 +1,72 @@
+[
+  {
+    "model": "Digimon.Level",
+    "pk": 1,
+    "fields": {
+      "name": "None"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 2,
+    "fields": {
+      "name": "In Training I"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 3,
+    "fields": {
+      "name": "In Training II"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 4,
+    "fields": {
+      "name": "Rookie"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 5,
+    "fields": {
+      "name": "Champion"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 6,
+    "fields": {
+      "name": "Ultimate"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 7,
+    "fields": {
+      "name": "Mega"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 8,
+    "fields": {
+      "name": "Armor"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 9,
+    "fields": {
+      "name": "Hybrid"
+    }
+  },
+  {
+    "model": "Digimon.Level",
+    "pk": 10,
+    "fields": {
+      "name": "Unknown"
+    }
+  }
+]

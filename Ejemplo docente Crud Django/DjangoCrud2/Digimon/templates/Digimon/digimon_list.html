@@ -1,0 +1,81 @@
+{% extends '../Layout/base.html' %} {% block content %}
+<section class="antialiased bg-gray-100 text-gray-600 h-screen px-4" x-data="app">
+  <div class="flex flex-col justify-center h-full">
+    <!-- Table -->
+    <div class="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+      <header class="px-5 py-4 border-b border-gray-100">
+        <div class="font-semibold text-gray-800">Manage Digmons</div>
+        <div class="justify-right my-8 select-none flex">
+          <a href="{% url 'digimon_new' %}">
+            <button
+              class="py-2 px-4 shadow-md no-underline rounded-full bg-red-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-red-300 focus:outline-none active:shadow-none mr-2">New</button>
+          </a>
+        </div>
+      </header>
+
+      <div class="overflow-x-auto p-3">
+        <table class="table-auto w-full">
+          <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+            <tr>
+              <th class="p-2">
+                <div class="font-semibold text-left">ID</div>
+              </th>
+              <th class="p-2">
+                <div class="font-semibold text-left">Name</div>
+              </th>
+              <th class="p-2">
+                <div class="font-semibold text-left">level</div>
+              </th>
+              <th class="p-2">
+                <div class="font-semibold text-left">attribute</div>
+              </th>
+              <th class="p-2">
+                <div class="font-semibold text-center">Action</div>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="text-sm divide-y divide-gray-100">
+            {% for digimon in digimon_list %}
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.id }}</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.name }}</div>
+              </td>
+              <td class="p-2">
+                <div class="text-left">{{ digimon.level }}</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.attribute }}</div>
+              </td>
+              <td class="p-2">
+                <a href="{% url 'digimon_detail' pk=digimon.id %}">
+                  <button
+                    class="py-2 px-4 shadow-md no-underline rounded-full bg-blue-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-blue-200 focus:outline-none active:shadow-none mr-2">detalles</button>
+                </a>
+                <a href="{% url 'digimon_edit' pk=digimon.id %}">
+                  <button
+                    class="py-2 px-4 shadow-md no-underline rounded-full bg-purple-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-purple-200 focus:outline-none active:shadow-none mr-2">editar</button>
+                </a>
+                <form method="post" action="{% url 'digimon_delete' pk=digimon.id %}">
+                  {% csrf_token %}
+                  <button type="submit" value="Delete"
+                    class="py-2 px-4 shadow-md no-underline rounded-full bg-zinc-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-zinc-200 focus:outline-none active:shadow-none mr-2">eliminar</button>
+                </form>
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td>
+                Sorry, no Digimon indexed.
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>
+{% endblock %}

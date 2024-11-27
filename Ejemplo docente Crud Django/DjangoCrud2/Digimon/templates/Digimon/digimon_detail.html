@@ -1,0 +1,72 @@
+{% extends '../Layout/base.html' %} {% block content %}
+<section class="antialiased bg-gray-100 text-gray-600 h-screen px-4" x-data="app">
+  <div class="flex flex-col justify-center h-full">
+    <!-- Table -->
+    <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+      <header class="px-5 py-4 border-b border-gray-100">
+        <div class="font-semibold text-gray-800">Digimon Details</div>
+        <div class="justify-right my-8 select-none flex">
+          <a href="{% url 'digimon_list' %}">
+            <button
+              class="py-2 px-4 shadow-md no-underline rounded-full bg-red-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-red-300 focus:outline-none active:shadow-none mr-2">Volver</button>
+          </a>
+        </div>
+      </header>
+
+      <div class="overflow-x-auto p-3">
+        <table class="table-auto w-full">
+          <tbody class="text-sm divide-y divide-gray-100">
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">Digimon ID</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.id }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">Name</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.name }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">Level</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.level }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">Attribute</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">{{ digimon.attribute }}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">Groups</div>
+              </td>
+              <td class="p-2">
+                <div class="font-medium text-gray-800">
+                  <ul>
+                    {% if digimon.group.all %}
+                    {% for group in digimon.group.all %}
+                    <li>{{ group.name }}</li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>
+{% endblock %}

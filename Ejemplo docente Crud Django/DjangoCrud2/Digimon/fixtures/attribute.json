@@ -1,0 +1,51 @@
+[
+  {
+    "model": "Digimon.Attribute",
+    "pk": 1,
+    "fields": {
+      "name": "None"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 2,
+    "fields": {
+      "name": "Vaccine"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 3,
+    "fields": {
+      "name": "Data"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 4,
+    "fields": {
+      "name": "Virus"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 5,
+    "fields": {
+      "name": "Free"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 6,
+    "fields": {
+      "name": "Variable"
+    }
+  },
+  {
+    "model": "Digimon.Attribute",
+    "pk": 7,
+    "fields": {
+      "name": "Unknown"
+    }
+  }
+]

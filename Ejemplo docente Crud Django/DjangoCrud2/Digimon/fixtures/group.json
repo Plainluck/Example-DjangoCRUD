@@ -1,0 +1,72 @@
+[
+  {
+    "model": "Digimon.Group",
+    "pk": 1,
+    "fields": {
+      "name": "Nature Spirits"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "fields": {
+      "name": "Deep Savers"
+    },
+    "pk": 2
+  },
+  {
+    "model": "Digimon.Group",
+    "fields": {
+      "name": "Nightmare Soldiers"
+    },
+    "pk": 3
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 4,
+    "fields": {
+      "name": "Wind Guardians"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 5,
+    "fields": {
+      "name": "Metal Empire"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 6,
+    "fields": {
+      "name": "Dark Area"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 7,
+    "fields": {
+      "name": "Virus Busters"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 8,
+    "fields": {
+      "name": "Dragon's Roar"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 9,
+    "fields": {
+      "name": "Jungle Troopers"
+    }
+  },
+  {
+    "model": "Digimon.Group",
+    "pk": 10,
+    "fields": {
+      "name": "Unknown"
+    }
+  }
+]

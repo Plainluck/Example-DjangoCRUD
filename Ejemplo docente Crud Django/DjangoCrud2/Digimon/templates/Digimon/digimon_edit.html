@@ -1,0 +1,19 @@
+{% extends '../Layout/base.html' %} {% block content %}
+<section class="antialiased bg-gray-100 text-gray-600 h-screen px-4" x-data="app">
+  <div class="flex flex-col justify-center h-full">
+    <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+      <header class="px-5 py-4 border-b border-gray-100">
+        <div class="font-semibold text-gray-800">New Digimon</div>
+        <form method="POST" class="post-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit"
+            class="py-2 px-4 shadow-md no-underline rounded-full bg-green-500 text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-green-300 focus:outline-none active:shadow-none mr-2">
+            Save
+          </button>
+        </form>
+      </header>
+    </div>
+  </div>
+</section>
+{% endblock %}
